@@ -20,12 +20,30 @@ class GreetingControllerTest {
 
 
   @Test
-  void greeting() {
+  void greetingWithoutAnyParamReturnDefaultMsg() throws Exception {
 
     mockMvc.perform(get("/greeting"))
         .andDo(print())
         .andExpect(status().isOk())
-        .andExpect()
+        .andExpect(jsonPath("$.content").value("Hello World!"));
   }
 
+
+  @Test
+  void greetingWithParamName() throws Exception {
+
+    mockMvc.perform(get("/greeting?name={name}","Oscar"))
+        .andDo(print())
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.content").value("Hello Oscar!"));
+  }
+
+
+  @Test
+  void notFoundBecauseErrorOnURL() throws Exception {
+
+    mockMvc.perform(get("/greetin?name={name}","Oscar"))
+        .andDo(print())
+        .andExpect(status().isNotFound());
+  }
 }
