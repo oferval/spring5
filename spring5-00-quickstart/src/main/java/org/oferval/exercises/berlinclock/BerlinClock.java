@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Based on this kata:
+ * @see <a href="https://technologyconversations.com/2014/02/25/java-8-tutorial-through-katas-berlin-clock-easy">
+ *      https://technologyconversations.com/2014/02/25/java-8-tutorial-through-katas-berlin-clock-easy
+ *      </a>
+ */
 public class BerlinClock {
 
   String[] berlinClock = new String[] {"Y", "OOOO", "OOOO", "OOOOOOOOOOO", "OOOO"};
