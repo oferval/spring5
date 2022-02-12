@@ -15,5 +15,7 @@ try:
     http://localhost:8081/greeting?name=Oscar
     
     
-Include some miscellanea exercises in org.oferval.exercises
+Include some miscellanea exercises in org.oferval.exercises: 
+            
+            BerlinClock
     
