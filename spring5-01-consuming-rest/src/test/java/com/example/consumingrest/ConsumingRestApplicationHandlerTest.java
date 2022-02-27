@@ -36,8 +36,6 @@ class ConsumingRestApplicationHandlerTest {
 	@Autowired
 	RestTemplate restTemplateMock;
 
-	private ObjectMapper mapper = new ObjectMapper();
-
 
 	@Test
 	void callResTemplateOK_getQuoteObjectFilled () throws URISyntaxException, JsonProcessingException {
@@ -64,10 +62,5 @@ class ConsumingRestApplicationHandlerTest {
 		assertThat(quote.getValue().getId()).isEqualTo(10L);
 
 	}
-
-	/*@Test
-	void callResTemplateKO_getQuoteObjectFilledNull () {
-
-	}*/
 
 }
